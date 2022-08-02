@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import StepFour from "./components/member/step-four";
+import StepOne from "./components/member/step-one";
+import StepThree from "./components/member/step-three";
+import StepTwo from "./components/member/step-two";
+import Wizard from "./components/wizard/wizard";
+import WizardStep from "./components/wizard/wizardstep";
+
 
 function App() {
+
+  const initialValues = {
+    name: '',
+    email: '',    
+    password: '',
+    dob: '',
+    address: '',
+    city: '',
+  };
+
+  const handelSubmit = (values) => {
+    console.log("Final Values to send", values);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-white flex">      
+      <Wizard submit={handelSubmit} initialValues={initialValues}>
+        <WizardStep title="">
+          <StepOne></StepOne>
+        </WizardStep>
+        <WizardStep title="">
+          <StepTwo></StepTwo>
+        </WizardStep>
+        <WizardStep title="">
+          <StepThree></StepThree>
+        </WizardStep>
+        <WizardStep title="">
+          <StepFour></StepFour>
+        </WizardStep>       
+      </Wizard>      
     </div>
   );
 }
