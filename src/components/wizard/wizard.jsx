@@ -18,8 +18,7 @@ function Wizard(props) {
   };
 
   const handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form submitted: ', form);
+    event.preventDefault();    
     submit(form);
   }
 

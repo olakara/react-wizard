@@ -1,3 +1,4 @@
+import FormCheckbox from "../form/form-checkbox";
 import FormSelect from "../form/form-select";
 
 function StepFour(props) {
@@ -36,6 +37,7 @@ function StepFour(props) {
     return ( 
       <>
         <FormSelect label="City" name="city" options={cityOptions}></FormSelect>
+        <FormCheckbox label="I agree to the terms and conditions" name="agree" value="true"></FormCheckbox>
       </> 
       );
   }

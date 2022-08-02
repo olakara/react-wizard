@@ -15,10 +15,11 @@ function App() {
     dob: '',
     address: '',
     city: '',
+    agree: ''
   };
 
   const handelSubmit = (values) => {
-    console.log("Final Values to send", values);
+    console.log("Form values:", values);
   }
 
   return (
