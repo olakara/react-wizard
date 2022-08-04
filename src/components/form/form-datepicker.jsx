@@ -1,7 +1,6 @@
 function FormDatepicker() {
     return (<>
-        Date Picker
-            
+        Date Picker            
     </>);
 }
 
